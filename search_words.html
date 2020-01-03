@@ -69,9 +69,22 @@
               if (!targetStr || targetStr === '') {
                 console.log('null');
               } else {
+                targetStr = targetStr.replace(/\*/g, '\\*');
+                targetStr = targetStr.replace(/\./g, '\\.');
+                targetStr = targetStr.replace(/\+/g, '\\+');
+                targetStr = targetStr.replace(/\^/g, '\\^');
+                targetStr = targetStr.replace(/\|/g, '\\|');
+                targetStr = targetStr.replace(/\[/g, '\\[');
+                targetStr = targetStr.replace(/\]/g, '\\]');
+                targetStr = targetStr.replace(/\(/g, '\\(');
+                targetStr = targetStr.replace(/\)/g, '\\)');
+                targetStr = targetStr.replace(/\?/g, '\\?');
+                targetStr = targetStr.replace(/\$/g, '\\$');
+                targetStr = targetStr.replace(/\{/g, '\\{');
+                targetStr = targetStr.replace(/\}/g, '\\}');
                 if (!!~te.indexOf(targetStr)) hits.push(targetStr);
                 var regExp = new RegExp(targetStr, 'g');
-                te = te.replace(regExp, '<span style=color:cyan >' + targetStr + '</span>');
+                te = te.replace(regExp, '<span style=color:cyan >' + word + '</span>');
               }
             });
 

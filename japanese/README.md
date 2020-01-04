@@ -3,11 +3,13 @@
 ## 助動詞
 
 - [名詞叙述語：〜だ](./da.md)
+- [〜んだ](./nda.md)
 
 ## 単語整理
 
 - [名詞叙述語](./meishijojutsugo.md)
 - [終助詞](./syuujoshi.md)
+- [疑問詞](./gimonshi.md)
 
 
 # 参考

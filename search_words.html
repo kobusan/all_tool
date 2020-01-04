@@ -662,7 +662,20 @@
       const katsuyoDou = ary => {
         let _ary = [...ary];
         _ary.forEach(str => {
-          if (!!~str.search(/う$/)) {
+          if (!!~str.search(/来る$/)) {
+            _ary.push(str.replace(/来る$/, '来な'));
+            _ary.push(str.replace(/来る$/, '来ま'));
+            _ary.push(str.replace(/来る$/, '来れ'));
+            _ary.push(str.replace(/来る$/, '来い'));
+          } else if (!!~str.search(/する$/)) {
+            _ary.push(str.replace(/する$/, 'しない'));
+            _ary.push(str.replace(/する$/, 'せぬ'));
+            _ary.push(str.replace(/する$/, 'される'));
+            _ary.push(str.replace(/する$/, 'します'));
+            _ary.push(str.replace(/する$/, 'すれ'));
+            _ary.push(str.replace(/する$/, 'しろ'));
+            _ary.push(str.replace(/する$/, 'せよ'));
+          } else if (!!~str.search(/う$/)) {
             _ary.push(str.replace(/う$/, 'わ'));
             _ary.push(str.replace(/う$/, 'お'));
             _ary.push(str.replace(/う$/, 'い'));
@@ -711,19 +724,6 @@
             _ary.push(str.replace(/ぶ$/, 'べ'));
             _ary.push(str.replace(/ぶ$/, 'ぼ'));
             _ary.push(str.replace(/ぶ$/, 'ん'));
-          } else if (!!~str.search(/来る$/)) {
-            _ary.push(str.replace(/来る$/, '来な'));
-            _ary.push(str.replace(/来る$/, '来ま'));
-            _ary.push(str.replace(/来る$/, '来れ'));
-            _ary.push(str.replace(/来る$/, '来い'));
-          } else if (!!~str.search(/する$/)) {
-            _ary.push(str.replace(/する$/, 'しない'));
-            _ary.push(str.replace(/する$/, 'せぬ'));
-            _ary.push(str.replace(/する$/, 'される'));
-            _ary.push(str.replace(/する$/, 'します'));
-            _ary.push(str.replace(/する$/, 'すれ'));
-            _ary.push(str.replace(/する$/, 'しろ'));
-            _ary.push(str.replace(/する$/, 'せよ'));
           }
         });
         return _ary;

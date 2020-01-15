@@ -610,12 +610,12 @@
     <br />
     <br />
 
-    <hr />
+    <!-- <hr />
     [結果]
     <br />
     <div style="width: 80%;">
       <p id="result" style="word-wrap: break-all;"></p>
-    </div>
+    </div> -->
 
     <script>
       const escapeStrings = ary => {
@@ -765,12 +765,12 @@
                 console.log('null');
               } else {
                 if (!!~text.indexOf(targetStr)) hits.push(targetStr);
-                const regExp = new RegExp(targetStr, 'g');
-                text = text.replace(regExp, '<span style=color:cyan >' + word + '</span>');
+                // const regExp = new RegExp(targetStr, 'g');
+                // text = text.replace(regExp, '<span style=color:cyan >' + word + '</span>');
               }
             });
 
-            result.innerHTML = text;
+            // result.innerHTML = text;
             document.getElementById('resultcount').innerHTML = `(${hits.length})件`;
             loading.classList.replace('loading', 'noloading');
             hitwords.innerHTML = hits.join('\n');

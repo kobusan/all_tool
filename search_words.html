@@ -819,8 +819,7 @@
             });
 
             const hitsOriginList = hitsOriginalWords.filter(obj => obj.found > 0).sort((a, b) => a.found - b.found);
-
-            result.innerHTML = text;
+            result.innerHTML = text.replace(/\n/g, '<br>');
             document.getElementById('resultcount').innerHTML = `(${hits.length})件`;
             loading.classList.replace('loading', 'noloading');
             hitwords.innerHTML = hits.join('\n');

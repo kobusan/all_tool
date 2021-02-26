@@ -807,9 +807,11 @@
                   console.log('null');
                 } else {
                   const foundIndex = textOrijin.indexOf(targetStr);
-                  if (!!~foundIndex || obj.found > foundIndex) {
+                  if (!!~foundIndex) {
                     hits.push(targetStr);
-                    obj.found = foundIndex;
+                    if (obj.found === 0 || foundIndex < obj.found) {
+                      obj.found = foundIndex;
+                    }
                   }
 
                   const regExpRepeat = new RegExp(targetStr, 'g'); //繰り返し
